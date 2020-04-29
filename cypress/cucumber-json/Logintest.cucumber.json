@@ -1,0 +1,23 @@
+[
+  {
+    "description": "  I want to test the Login in EJR application",
+    "keyword": "Feature",
+    "name": "Test EJR Login",
+    "line": 1,
+    "id": "test-ejr-login",
+    "tags": [],
+    "uri": "Logintest.feature",
+    "elements": [
+      {
+        "description": "    Given: Open EJR URL\n    When: I Type in\n        |    username  |  Password  |\n        |    Isabel.Valencia9620  |  M?gfxs5R  |\n    And: I Click in sign in button\n    Then: \"Welcome Isabel Cristina!\" should be shown",
+        "id": "test-ejr-login;test-login-with-a-valid-user",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Test login with a valid User",
+        "tags": [],
+        "type": "scenario",
+        "steps": []
+      }
+    ]
+  }
+]
