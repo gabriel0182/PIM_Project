@@ -4,17 +4,6 @@ import Loginpage from  '../PageObject/Loginpage'
 import Scholar  from  '../PageObject/Scholar'
 import Activist  from  '../PageObject/Activist'
 
-describe('Activist form', function () {
-
-    beforeEach(function() {
-        cy.fixture("example.json").then(function(data) {
-        this.data = data
-    
-        })
-
-
-})
-
 const ac = new Activist ()
 
    
@@ -26,21 +15,14 @@ Given('Open Activist Form', () => {
     
   })
    
-  When('I Fill out the form', function(data) { 
+When('I Fill out the form', () =>{ 
 
-
-    
-
-    it('Activist test', function () {
-
-            ac.contactinfo().type(this.data.name)
-
+  ac.contactinfo()
+      
        
+     
 
-    })    
-
-  })
-
+  
     When('I Click in subbmit button', () => { 
    
        ac.submit ()
@@ -49,7 +31,11 @@ Given('Open Activist Form', () => {
   
     Then('Confirmation message should be shown', () => {
 
+      //cy.get('#foo')
+  //.should('have.text', 'something')
+
         cy.contains('Thank You!').should('have.text', 'Thank You!')
        });
     
-    })
+    
+      })
