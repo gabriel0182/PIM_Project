@@ -17,7 +17,13 @@ Given('Open Activist Form', () => {
    
 When('I Fill out the form', () =>{ 
 
+
+  
   ac.contactinfo()
+  ac.Fileupload()
+  
+  
+  
       
        
      

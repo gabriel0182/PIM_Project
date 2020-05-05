@@ -11,6 +11,7 @@
   "devDependencies": {
     "cypress": "^4.1.0",
     "cypress-cucumber-preprocessor": "^2.2.0",
+    "cypress-file-upload": "^4.0.6",
     "cypress-xpath": "^1.4.0"
   },
   "cypress-cucumber-preprocessor": {
