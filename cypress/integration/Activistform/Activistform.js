@@ -40,7 +40,9 @@ When('I Fill out the form', () =>{
       //cy.get('#foo')
   //.should('have.text', 'something')
 
-        cy.contains('Thank You!').should('have.text', 'Thank You!')
+        const asser= cy.get('.styles__TitleForm-he1avu-2')
+        asser.cy.wait(60000)
+        asser.should('have.text', 'Thank You!')
        });
     
     

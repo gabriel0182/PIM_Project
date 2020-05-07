@@ -73,10 +73,8 @@ fillCity ()
 
 {
 
-    const city=cy.xpath("//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4']//div[@class='styles__Wrapper-nrkjin-0 jyPRJo']//div[@id='mui-component-select-0']")
-    city.click()
-    city.get('[data-value="Jacksonville"]')
-    city.click()
+    const city=cy.xpath("//input[@id='86']")
+    city.type('Miami')
     return this
 }
 

@@ -52,7 +52,7 @@ Given('Open Scholar Form', () => {
 
   Then('Confirmation message should be shown', () => {
 
-   cy.contains('Thank You!').should('have.text', 'Thank You!')
+   cy.get('.styles__TitleForm-he1avu-2').should('have.text', 'Thank You!')
   });
    
   /*Then('I can add another item', () => {
