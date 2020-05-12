@@ -6,6 +6,6 @@ Feature: Create a Coordinator account
     Given Open the account page
     
     When I Fill out the form
-      
-    And I Click in subbmit button
+
+    And I Click in save button      
     Then Confirmation message should be shown

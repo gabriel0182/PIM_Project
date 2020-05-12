@@ -298,7 +298,7 @@ apply ()
 
 {
     const btn3= cy.contains('Submit')
-    btn3.click()
+    btn3.click({ timeout: 10000 })
 
 }
 

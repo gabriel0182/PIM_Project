@@ -164,7 +164,7 @@ class activist {
   }
 
   submit() {
-    cy.xpath("//span[contains(text(),'Submit')]").click();
+    cy.xpath("//span[contains(text(),'Submit')]").click({ timeout: 10000 });
   }
 }
 

@@ -52,9 +52,9 @@ Given('Open Scholar Form', () => {
 
   Then('Confirmation message should be shown', () => {
 
-   cy.get('.styles__TitleForm-he1avu-2').should('have.text', 'Thank You!')
+  
+    const asser= cy.get('.styles__TitleForm-he1avu-2',{ timeout: 10000 })
+        asser.should('have.text', 'Thank You!')
+
   });
    
-  /*Then('I can add another item', () => {
-    expect(cy.get('@addNewItemInput').should('be.empty');
-  });*/

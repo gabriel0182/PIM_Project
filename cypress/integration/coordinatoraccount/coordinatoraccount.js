@@ -4,6 +4,7 @@ import Loginpage from "../PageObject/Loginpage";
 import Coordinator from "../PageObject/Coordinator";
 
 
+
 const co = new Coordinator();
 
 Given("Open the account page", () => {
@@ -11,14 +12,18 @@ Given("Open the account page", () => {
 });
 
 When("I Fill out the form", () => {
-  co.login();
+  co.go_account();
+  co.coor_form();
 
-  When("I Click in subbmit button", () => {
-    co.account_tab();
-  });
+
+When("I Click in save button", () => {
+  co.submitform();
+});
+})
 
   Then("Confirmation message should be shown", () => {
-    const assert = cy.xpath("//h2[@class='styles__Title-sc-10mt17g-1 bdhaoO']");
-    assert.should("have.text", "Welcome Fernando!");
-  });
-});
+    cy.on('window:alert', (str) => {
+      expect(str).to.equal(`The account was created successfully`)
+    });
+
+  })

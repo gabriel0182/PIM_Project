@@ -1,5 +1,10 @@
 [{
     "name": "Marcus",
     "last_Name": "Merk",
+    "username": "FernandoWick",
+    "password": "Test123*",
+    "coorname": "Jhon",
+    "coorlastname": "Toppler",
+    "phone": "3456789543",
     "email": "gabriel.gomez@10pearls.com"
   }]

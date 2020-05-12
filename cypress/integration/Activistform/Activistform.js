@@ -37,11 +37,7 @@ When('I Fill out the form', () =>{
   
     Then('Confirmation message should be shown', () => {
 
-      //cy.get('#foo')
-  //.should('have.text', 'something')
-
-        const asser= cy.get('.styles__TitleForm-he1avu-2')
-        asser.cy.wait(60000)
+       const asser= cy.get('.styles__TitleForm-he1avu-2',{ timeout: 10000 })
         asser.should('have.text', 'Thank You!')
        });
     

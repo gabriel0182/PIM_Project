@@ -1,52 +1,78 @@
 ///  <reference types="cypress"/>
 
 import Loginpage from "../PageObject/Loginpage";
-var csv = require("csvtojson");
-const fs = require('fs');
-
+import "cypress-wait-until";
 
 const lp = new Loginpage();
-let csvFilePath = "../../../fixtures/datafile.csv"
 class Coordinator {
   admin_login() {
-    csv()
-      .fromFile(csvFilePath)
-      .then(function (jsonArrayObj) {
-        //when parse finished, result will be emitted here.
-        // console.log(jsonArrayObj);
-        jsonArrayObj.map((testDataRow) => {
-          const data = {
-            username: testDataRow.usernaname,
-            password: testDataRow.password,
-          };
+    const testData = require("../../fixtures/list.json");
+    testData.forEach((testDataRow) => {
+      const data = {
+        username: testDataRow.username,
+        password: testDataRow.password,
+      };
+      lp.Visit();
+      const FN = cy.xpath("//input[@id='username']");
+      FN.clear();
+      context(`Generating a test for ${data.username}`, () => {
+        FN.type(data.username);
+        const ln = cy.xpath(
+          "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/div[1]/input[1]"
+        );
+        ln.clear();
+        ln.type(`${data.password}`);
+        const submit = cy.xpath("//span[contains(text(),'Sign In')]");
+        submit.click();
+        return this;
         });
-      });
-
-    lp.Visit();
-    const user = cy.xpath("//input[@id='username']")
-    context(`Generating a test for ${data.username}`, () => {
-      user.type(data.username);
-      user.type(this.datafile.username);
-      const pass = cy.xpath("//input[@id='password']");
-      pass.type(`${data.password}{enter}`);
     });
   }
 
-  login() {
-    const submit = cy.xpath("//span[contains(text(),'Sign In')]");
-    submit.click();
+  go_account() {
+    const account =cy.get('[href="/accounts"]')
+    account.click();
+   const tab = cy.get('[id="nav-tab-1"]')
+    tab.click({force:true});
+    const add = cy.get('[type="button"]').get('.FsowF').contains('Add Account').should('be.visible');
+    add.click();
+    cy.get('.kXMnzN')
+    return this;
   }
 
-  account_tab() {
-    const menu = cy.xpath(
-      "/html[1]/body[1]/div[1]/aside[1]/nav[1]/ul[1]/li[4]/a[1]/i[1]"
-    );
-    menu.click;
-    const tab = cy.xpath(
-      "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[2]/div[1]/a[2]/span[1]"
-    );
-    tab.click;
+  coor_form() {
+    const testData = require("../../fixtures/list.json");
+    testData.forEach((testDataRow) => {
+      const data = {
+        coorname: testDataRow.coorname,
+        coorlastname: testDataRow.coorlastname,
+        email: testDataRow.email,
+        phone: testDataRow.phone,
+      };
+
+      const coorfn = cy.xpath("//input[@id='FirstName']");
+      coorfn.clear();
+      context(`Generating a test for ${data.coorname}`, () => {
+        coorfn.type(data.coorname);
+        const coorln = cy.xpath("//input[@id='LastName']");
+        coorln.clear();
+        coorln.type(`${data.coorlastname}{enter}`);
+        const cooremail = cy.xpath("//input[@id='Mail']");
+        cooremail.clear();
+        cooremail.type(`${data.email}{enter}`);
+        const coorphone = cy.xpath("//input[@id='CellPhone']");
+        coorphone.clear();
+        coorphone.type(`${data.phone}{enter}`);
+        return this;
+      });
+    });
+  }
+
+  submitform() {
+    const save = cy.xpath("//span[contains(text(),'Save')]");
+    save.click();
+    return this;
   }
 }
 
-export default Coordinator
+export default Coordinator;
