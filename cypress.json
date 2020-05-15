@@ -4,11 +4,20 @@
   "projectId": "7sv54e",
   "json.schemas": [
     {
-      "fileMatch": [
-        "/cypress.json"
-      ],
+      "fileMatch": ["/cypress.json"],
       "url": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json"
     }
-  ]
+  ],
+  "db": {
+    "userName": "ejadmin",
+    "password": "M33Tusl@te",
+    "server": "tcp:ej-dev.database.windows.net,1433",
+    "options": {
+        "database": "EJQA",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion" : true
+    }
+ 
+  }
 }
 
