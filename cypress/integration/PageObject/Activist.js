@@ -15,7 +15,7 @@ class activist {
   }
 
   contactinfo() {
-    const testData = require("../Activistform/list.json");
+    const testData = require("../../fixtures/list.json");
     testData.forEach((testDataRow) => {
       const data = {
         name: testDataRow.name,
@@ -164,7 +164,7 @@ class activist {
   }
 
   submit() {
-    cy.xpath("//span[contains(text(),'Submit')]").click({ timeout: 10000 });
+    cy.xpath("//span[contains(text(),'Submit')]").click({ timeout: 20000 });
   }
 }
 

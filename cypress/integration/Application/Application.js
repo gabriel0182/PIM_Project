@@ -1,14 +1,20 @@
 ///  <reference types="cypress"/>
 
 import Loginpage from "../PageObject/Loginpage";
-import status  from  '../PageObject/Appstatus'
+import status  from  '../PageObject/Appstatus';
+import Activist  from  '../PageObject/Activist'
 
 const app = new status ()
+const ac = new Activist ()
 
    
 
 Given('Login into the Site', () => {
-
+  
+  ac.activistform()
+  ac.contactinfo()
+  ac.Fileupload()
+  ac.submit ()
  app.login();
       
     
@@ -34,8 +40,7 @@ When('Find the Activist Application', () =>{
   
     Then('Validating the Application Status', () => {
 
-       const asser= cy.get('.styles__TitleForm-he1avu-2',{ timeout: 10000 })
-        asser.should('have.text', 'Thank You!')
+       app.assertion()
        });
     
     

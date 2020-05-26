@@ -15,7 +15,8 @@
     "options": {
         "database": "EJQA",
         "encrypt": true,
-        "rowCollectionOnRequestCompletion" : true
+        "rowCollectionOnRequestCompletion" : true,
+        "supportFile": "cypress/support/commands.ts"
     }
  
   }
