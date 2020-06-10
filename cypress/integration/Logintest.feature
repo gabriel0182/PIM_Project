@@ -6,6 +6,6 @@ Feature: Test EJR Login
     Given Open EJR URL
     When I Type in
         |    username  |  Password  |
-        |    Isabel.Valencia9620  |  M?gfxs5R  |
+        |    FernandoWick  |  Test123*  |
     And I Click in sign in button
     Then User Name should be shown

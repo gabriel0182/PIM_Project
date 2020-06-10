@@ -28,10 +28,11 @@ Given('Open EJR URL', () => {
   }) 
 
   Then('User Name should be shown', () => {
-
-   cy.contains('Welcome Isabel Cristina!').should('have.text', 'Welcome Isabel Cristina!')
+const title = cy.get('.IDpBG').get('.bdhaoO')
+if (title.should('have.text', 'Welcome Fernando!')){
+  cy.log('Test Pass')
+}
+else
+  Cypress.env('RETRIES', 2)
   });
    
-  /*Then('I can add another item', () => {
-    expect(cy.get('@addNewItemInput').should('be.empty');
-  });*/

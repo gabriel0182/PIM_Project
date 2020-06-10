@@ -6,9 +6,13 @@ class loginpage {
   }
 
   Fillusername(value) {
-    const field = cy.get("#username");
-    field.clear;
-    field.type(value);
+    const userName = cy.get("#username")
+    if(userName.should('be.visible')){
+     userName.clear()
+      userName.type(value);
+    }
+    else
+   cy.wait($userName,4000).should('be.visible')
     return this;
   }
 
@@ -22,6 +26,7 @@ class loginpage {
   Submit() {
     const button = cy.contains("Sign In");
     button.click();
+    button.wait(4000)
   }
 }
 
