@@ -17,15 +17,11 @@ Then("Get response", () => {
       Cypress.env("RETRIES", 2);
     }
   });
+  const loginData = require("../../fixtures/login.json");
   cy.request({
     method: "POST",
     url: "https://ej-qa-be.azurewebsites.net/api/Auth/login",
-    body: {
-      userName: "FernandoWick",
-      password: "Test123*",
-      deviceId: "ABC123",
-      isWebUser: "true",
-    },
+    body: loginData,
     headers: {
       "content-type": "application/json",
     },
