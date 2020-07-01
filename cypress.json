@@ -23,7 +23,7 @@
   },
   "env":
   {
-    "RETRIES": 1
+    "RETRIES": 2
   }
 }
 

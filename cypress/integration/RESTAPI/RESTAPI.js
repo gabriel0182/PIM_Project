@@ -16,7 +16,7 @@ Then("Get response", () => {
     } else if (expect(resp.status).to.not.eq(200)) {
       Cypress.env("RETRIES", 2);
     }
-  });
+  })
   const loginData = require("../../fixtures/login.json");
   cy.request({
     method: "POST",
@@ -24,7 +24,7 @@ Then("Get response", () => {
     body: loginData,
     headers: {
       "content-type": "application/json",
-    },
+    }
   })
     .then((resp) => {
       expect(resp.status).to.eq(200),
@@ -48,8 +48,8 @@ Then("Get response", () => {
         headers: {
           "content-type": "application/json",
           Authorization: getToken,
-        },
-      });
+        }
+      })
     })
     .then((resp) => {
       if (
@@ -60,7 +60,7 @@ Then("Get response", () => {
         cy.log("Test Pass");
       } else expect(resp.status).to.not.eq(200);
       Cypress.env("RETRIES", 2);
-    });
+    })
   const testData = require("../../fixtures/order.json");
   let getToken = localStorage.getItem("token");
   cy.request({
@@ -70,7 +70,7 @@ Then("Get response", () => {
     headers: {
       "content-type": "application/json",
       Authorization: `Bearer ${getToken}`,
-    },
+    }
   }).then((resp) => {
     expect(resp.status).to.eq(200),
       expect(resp.body.hasErrors).to.eq(false),
@@ -79,5 +79,5 @@ Then("Get response", () => {
       Cypress.env("RETRIES", 2);
     }
     localStorage.removeItem("token");
-  });
-});
+  })
+})
