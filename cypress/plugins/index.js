@@ -25,7 +25,3 @@ module.exports = (on, config) => {
 on('file:preprocessor', cucumber())
 }
 const sqlServer = require('cypress-sql-server');
-
-
-
-

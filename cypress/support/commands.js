@@ -36,3 +36,4 @@ Cypress.Commands.add('iframe', { prevSubject: 'element' }, ($iframe, callback = 
         .then(iframe => cy.wrap(iframe.contents().find('body')))
         .within({}, callback)
 })
+import 'cypress-wait-until';

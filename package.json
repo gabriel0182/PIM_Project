@@ -9,12 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.1.0",
-    "cypress-cucumber-preprocessor": "^2.2.0",
+    "cypress": "^4.10.0",
+    "cypress-cucumber-preprocessor": "^2.5.3",
     "cypress-file-upload": "^4.0.6",
     "cypress-plugin-retries": "^1.5.2",
     "cypress-sql-server": "^1.0.0",
-    "cypress-wait-until": "^1.7.0",
+    "cypress-wait-until": "^1.7.1",
     "cypress-xpath": "^1.4.0"
   },
   "cypress-cucumber-preprocessor": {
@@ -33,5 +33,13 @@
     "tedious": "^8.3.0",
     "typescript": "^3.9.3"
   },
-  "description": ""
+  "description": "This is my first project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel0182/Cypress_QA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gabriel0182/Cypress_QA/issues"
+  },
+  "homepage": "https://github.com/gabriel0182/Cypress_QA#readme"
 }
