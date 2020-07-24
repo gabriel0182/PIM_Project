@@ -1,8 +1,7 @@
-{
-  "jsonObj": [
-    {
-      "Id": "1",
-      "entityname": "Entity AUT"
-    }
-  ]
-}
+[
+  {
+    "entityname": "Entity AUT 1",
+    "units": "Committed capital",
+    "increment": 2
+  }
+]
