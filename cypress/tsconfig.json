@@ -1,15 +1,19 @@
 {
-    "compilerOptions": {
-      "strict": true,
-      "baseUrl": "../node_modules",
-      "target": "es5",
-      "lib": ["es5", "dom"],
-      "types": ["cypress"],
-      "compilerOptions": {
-        "types": ["cypress", "cypress-wait-until"]
-        }
-    },
-    "include": [
-      "**/*.ts"
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "../node_modules",
+    "target": "es5",
+    "lib": [
+      "es5",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "cypress-wait-until"
     ]
-  }
+  },
+  
+  "include": [
+    "**/*.ts"
+  ]
+}
