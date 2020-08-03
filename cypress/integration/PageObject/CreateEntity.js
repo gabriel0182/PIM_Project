@@ -18,7 +18,7 @@ class entity {
   newEntity() {
     const entitytab = cy.get("[id='2']").contains("Investment");
     entitytab.click({ force: true });
-    entitytab.wait(2000);
+    entitytab.wait(4000);
     const addentityButton = cy
       .get("[class='buttonText text-primary']")
       .contains("Create Investment");
