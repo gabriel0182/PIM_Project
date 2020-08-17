@@ -3,7 +3,7 @@ import React from "react";
 
 class PimLogin {
   visit() {
-    cy.visit("https://pimqa.realpage.com/AIMUI/portfolio");
+    cy.visit("https://pimqa.realpageaim.net/AIMUI/portfolio");
     //cy.visit("https://pim-wmu.asseteye.net/AIMUI/portfolio")
     cy.get("[class='login-form-container']").should('be.visible')
   }
