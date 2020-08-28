@@ -1,7 +1,8 @@
-[{
-    "username": "tanner_admin_cfres@test.com",
-    "password": "Admin@20204",
+[
+  {
+    "username": "tanner.taylor@realpage.com",
+    "password": "TEMP",
     "entityname": "Entity AUT 1",
     "units": "Committed capital"
-    
-}]
+  }
+]
