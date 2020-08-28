@@ -15,5 +15,6 @@ When("I Go to Entity Menu and crete a new one", () => {
 
 Then("Confirm the Entity was created", () => {
   ne.assert();
+  ne.delete();
   //ne.updateJson();
 });
