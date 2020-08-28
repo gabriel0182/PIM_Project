@@ -22,7 +22,8 @@ Given('I select the Portfolio Management Option', () => {
    
      Then('Confirm the Group was created', () => {
 
-      gr.assertion()
+      gr.assertion();
+      gr.delete();
  
         
         })

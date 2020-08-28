@@ -69,10 +69,21 @@ class group {
             cy.get("a")
               .get("[col-id='Name']")
               .contains(`${data.groupname}`)
-              .should("have.text", `${data.groupname}`);
+              .should("have.text", `${data.groupname}`).click({force: true});
+              return this;
           });
       });
     });
+  }
+  delete(){
+    const del = cy.get("[class='text-info editable-text-field-delete-icon']").contains('| Delete')
+    del.click({force: true})
+    const ok = cy.get("[class='modal-dialog']")
+    ok.within(() => {
+      cy.get("[type='button']")
+      .contains('OK')
+      .click({force: true})
+    })
   }
 }
 
