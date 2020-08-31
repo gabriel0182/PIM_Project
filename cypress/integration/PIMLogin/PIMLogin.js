@@ -18,13 +18,12 @@ Given('Open PIM URL', () => {
 
     When('Click in submit button', () => { 
    
-        lg.submit()
-     
+       lg.subMit()   
  }) 
    
      Then('Confirm user is logged into PIM System', () => {
  
-        const name = cy.get('.mr-4').should('be.visible').should('have.text','Welcome back, Tanner!')
+        const name = cy.get("[class='raul-header-user-handle d-none d-md-block m-0']").should('be.visible').should('have.text','Tanner T')
 
         })
     })

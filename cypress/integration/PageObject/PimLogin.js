@@ -1,12 +1,16 @@
 <reference types="cypress" />;
 import React from "react";
 
+
 class PimLogin {
   visit() {
-    cy.visit("https://aimunified-wmu.realpageaim.net/AIMUI/portfolio");
+    //cy.visit("https://pimqa.realpageaim.net/AIMUI/portfolio");
+    //cy.visit("https://pim-wmu.realpageaim.net/AIMUI/portfolio")
+    //cy.visit("http://www-qa.realpage.com/home");
+    //cy.visit("https://pimqa.realpage.com/AIMUI/portfolio");
     //cy.visit("https://pim-wmu.asseteye.net/AIMUI/portfolio")
-    //cy.get("[class='login-form-container']").should("be.visible");
-  }
+    cy.visit("https://aimunified-wmu.realpageaim.net/AIMUI/portfolio")
+    }
 
   creDentials() {
     const testData = require("../../fixtures/PIM.json");
@@ -22,15 +26,18 @@ class PimLogin {
         const pass = cy.get("#Password");
         pass.clear();
         pass.type(`${data.password}`);
-        pass.wait(1000);
-      });
+       });
     });
   }
 
-  submit() {
-    const button = cy.get("button[value='login']");
-    button.click();
+  subMit(){
+
+    const next = cy.get("[value='login']");
+    next.click({ force: true });
+    next.wait(1000);
+
   }
+
 }
 
 export default PimLogin;
