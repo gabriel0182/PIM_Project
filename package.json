@@ -38,7 +38,7 @@
     "mocha": "^8.1.2",
     "neat-csv": "^5.2.0",
     "papaparse": "^5.2.0",
-    "puppeteer": "^1.8.0",
+    "puppeteer": "^1.13.0",
     "puppeteer-core": "^5.2.1",
     "react": "^16.13.1",
     "tedious": "^8.3.0",
