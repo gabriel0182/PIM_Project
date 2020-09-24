@@ -1,0 +1,12 @@
+[
+  {
+    "investorname": "Invest AUT 2",
+    "type": "Investor",
+    "units": "Committed capital",
+    "group": "new platform",
+    "amount": 250000,
+    "role": "Investor",
+    "date": "Sep. 14, 2020",
+    "increment": 3
+  }
+]

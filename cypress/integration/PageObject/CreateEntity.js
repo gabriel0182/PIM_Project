@@ -18,7 +18,7 @@ class entity {
   newEntity() {
     const entitytab = cy.get("[id='2']").contains("Investment");
     entitytab.click({ force: true });
-    entitytab.wait(6000);
+    entitytab.wait(12000);
     const addentityButton = cy
       .get("[class='buttonText text-primary']")
       .contains("Create Investment");
@@ -35,8 +35,9 @@ class entity {
         entityName.type(data.entityname);
         const units = cy.get("#newInvestor");
         units.select(`${data.units}`);
-        const addEntity = cy.xpath("//button[contains(text(),'Submit')]");
-        addEntity.click();
+        const addEntity = cy.get("[class='modal-footer clearfix']").get("[type='button']").contains("Submit");
+        addEntity.click({force: true});
+        addEntity.wait(6000)
       });
       return this;
     });
@@ -49,7 +50,7 @@ class entity {
         entityname: testDataRow.entityname,
       };
       context(`Generating a test for ${data.entityname}`, () => {
-        const entitycreated = cy.get("[id='example-input-11']");
+        const entitycreated = cy.xpath("/html[1]/body[1]/app-root[1]/ui-shell[1]/div[1]/ui-main-content[1]/main[1]/section[1]/app-portfolio[1]/div[1]/div[2]/div[1]/div[2]/div[1]/input[1]");
         entitycreated.clear();
         entitycreated.type(`${data.entityname}`, "{enter}").wait(4000);
         const table = cy.get("[role='gridcell']").get("[col-id='Name']")

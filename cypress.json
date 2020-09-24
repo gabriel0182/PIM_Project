@@ -1,6 +1,7 @@
 {
   "testFiles": "**/*.feature",
   "defaultCommandTimeout": 100000,
+  "retries": 0,
   "execTimeout": 100000,
   "pageLoadTimeout": 300000,
   "chromeWebSecurity": false,

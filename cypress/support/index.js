@@ -21,5 +21,6 @@
 import 'cypress-xpath';
 require('cypress-xpath');
 require ('cypress-sql-server')
-// Retry failed tests:
-require('cypress-plugin-retries')
+
+
+

@@ -9,7 +9,10 @@ class PimLogin {
     //cy.visit("http://www-qa.realpage.com/home");
     //cy.visit("https://pimqa.realpage.com/AIMUI/portfolio");
     //cy.visit("https://pim-wmu.asseteye.net/AIMUI/portfolio")
-    cy.visit("https://aimunified-wmu.realpageaim.net/AIMUI/portfolio")
+    const homePage = cy.clearCookies();
+    homePage.clearLocalStorage();
+    homePage.visit("https://aimunified-wmu.realpageaim.net/AIMUI/portfolio")
+    return this;
     }
 
   creDentials() {
