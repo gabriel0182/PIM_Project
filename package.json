@@ -46,7 +46,7 @@
     "utf-8-validate": "^5.0.2",
     "util.promisify": "^1.0.1",
     "websocket": "^1.0.31",
-    "ws": "^7.3.1"
+    "ws": "^7.4.6"
   },
   "description": "This is my first project",
   "repository": {
